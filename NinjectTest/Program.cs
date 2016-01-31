@@ -11,8 +11,8 @@ namespace NinjectTest
     {
         static void Main(string[] args)
         {
-            IKernel kernal = new StandardKernel();
-            kernal.Bind<IPlayer>().To<Alex>();
+            IKernel kernal = new StandardKernel(new PlayerBindingModule());
+
             var competition = kernal.Get<PoolCompetition>();
 
             competition.StatePlayer();

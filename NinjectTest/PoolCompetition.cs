@@ -9,13 +9,13 @@ namespace NinjectTest
     class PoolCompetition : ICompetition
     {
         private string title = "Pool competition";
-        private IPlayer player;
+        private IPlayer[] players;
 
-        public IPlayer Player
+        public IPlayer[] Players
         {
             get
             {
-                return player;
+                return players;
             }
         }
 
@@ -27,15 +27,15 @@ namespace NinjectTest
             }
         }
 
-        public PoolCompetition(IPlayer newplayer)
+        public PoolCompetition(IPlayer[] newplayer)
         {
-            player = newplayer;
+            players = newplayer;
         }
 
         public void StatePlayer()
         {
-            IPlayer Player = player;
-            Console.WriteLine($"{Player.Name} has won the trophy, saying '{Player.WinningQuote}' ");
+            
+            Players.ToList().ForEach(p=>Console.WriteLine($"{p.Name} is in the tornement, their winning phrase will be '{p.WinningQuote()}' "));
 
         }
     }

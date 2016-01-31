@@ -9,7 +9,7 @@ namespace NinjectTest
     interface ICompetition
     {
         string Title { get; }
-        IPlayer Player { get; }
+        IPlayer[] Players { get; }
 
         void StatePlayer();
 

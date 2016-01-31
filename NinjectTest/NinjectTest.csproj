@@ -50,6 +50,8 @@
     <Compile Include="Alex.cs" />
     <Compile Include="ICompetition.cs" />
     <Compile Include="IPlayer.cs" />
+    <Compile Include="NewPlayer.cs" />
+    <Compile Include="PlayerBindingModule.cs" />
     <Compile Include="PoolCompetition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
