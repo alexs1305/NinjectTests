@@ -8,7 +8,7 @@ namespace NinjectTest
 {
     class NewPlayer : IPlayer
     {
-        private string name = "new player";
+        private string name = "A New Player";
         private Func<string> winningquote = () => "I am a loser";
 
         public string Name
